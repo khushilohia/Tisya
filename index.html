@@ -341,6 +341,43 @@
       #integration {
         display: none !important;
       }
+      /* Fix project slider images visibility */
+      .case-study .thumbnail-wrap {
+        overflow: hidden !important;
+        position: relative;
+      }
+      .case-study .w-slider {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .case-study .w-slider-mask {
+        overflow: hidden !important;
+        height: 100%;
+      }
+      .case-study .w-slide {
+        height: 100%;
+      }
+      .case-study .w-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block !important;
+      }
+      .case-study .overlay-01 {
+        z-index: 2;
+      }
+      .case-study .year {
+        z-index: 3;
+      }
+      .case-study .slide-nav {
+        z-index: 4 !important;
+      }
+      /* Ensure slider arrows are hidden */
+      .case-study .w-slider-arrow-left,
+      .case-study .w-slider-arrow-right {
+        display: none !important;
+      }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
@@ -1585,7 +1622,7 @@
                     </div>
                     <div class="pricing-description">
                       <div class="price">
-                        <h4 class="display-h2">$499</h4>
+                        <h4 class="display-h2">₹41,999</h4>
                         <div class="large-paragraph t---neutral-10">
                           one-time
                         </div>
@@ -1752,7 +1789,7 @@
                     </div>
                     <div class="pricing-description">
                       <div class="price">
-                        <h4 class="display-h2">$2,499</h4>
+                        <h4 class="display-h2">₹2,09,999</h4>
                         <div class="large-paragraph t---neutral-10">
                           project
                         </div>
@@ -2133,124 +2170,149 @@
               data-w-id="43e163e0-a4bf-51fc-16fd-fc73e02b5638"
               class="display-h2"
             >
-              Client success stories
+              Our Projects
             </h2>
             <div
               data-w-id="43e163e0-a4bf-51fc-16fd-fc73e02b563a"
               class="large-paragraph t---neutral-10"
             >
-              Tisya AI has helped businesses transform their operations with
-              custom software, AI solutions, and digital strategies.
+              Explore our portfolio of innovative solutions built with cutting-edge technology and creative problem-solving.
             </div>
           </div>
           <div class="case-study-cms-wrap w-dyn-list">
             <div role="list" class="case-study-cms-list w-dyn-items">
+              <!-- Sanjaya Project with Slider -->
               <div role="listitem" class="case-study-cms w-dyn-item">
-                <a
-                  href="https://sanjaya-prototype.vercel.app/"
-                  target="_blank"
-                  class="case-study w-inline-block"
-                  ><div class="thumbnail-wrap">
-                    <img
-                      loading="lazy"
-                      src="./projects/sanjaya-cover.png"
-                      alt="Sanjaya Project"
-                      class="thumbnail"
-                    />
-                    <div class="overlay-01"></div>
-                    <div class="year">
+                <div class="case-study">
+                  <div class="thumbnail-wrap">
+                    <div data-delay="2500" data-animation="slide" class="w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="w-slide">
+                          <img src="./projects/sanjaya-cover.png" alt="Sanjaya 1" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                      </div>
+                      <div class="slide-nav w-slider-nav w-round" style="bottom: 10px;"></div>
+                    </div>
+                    <div class="overlay-01" style="pointer-events: none;"></div>
+                    <div class="year" style="pointer-events: none;">
                       <div class="small-paragraph">2025</div>
                     </div>
                   </div>
-                  <div class="case-study-text">
+                  <a href="https://sanjaya-prototype.vercel.app/" target="_blank" class="case-study-text" style="cursor: pointer; display: block; text-decoration: none; color: inherit;">
                     <h3 class="display-h5">Sanjaya - AI Agriculture</h3>
                     <div class="paragraph t---neutral-10">
-                      An AI-powered smart agriculture platform that helps
-                      farmers optimize crop management, monitor soil conditions,
-                      and predict weather patterns for better agricultural
-                      outcomes.
+                      An AI-powered smart agriculture platform that helps farmers optimize crop management, monitor soil conditions, and predict weather patterns for better agricultural outcomes.
                     </div>
-                  </div></a
-                >
+                  </a>
+                </div>
               </div>
+              
+              <!-- NewsApp Project with Slider -->
               <div role="listitem" class="case-study-cms w-dyn-item">
-                <a
-                  href="https://newsapp-mk.vercel.app/"
-                  target="_blank"
-                  class="case-study w-inline-block"
-                  ><div class="thumbnail-wrap">
-                    <img
-                      loading="lazy"
-                      src="./projects/newsapp (1).png"
-                      alt="NewsApp Project"
-                      class="thumbnail"
-                    />
-                    <div class="overlay-01"></div>
-                    <div class="year">
+                <div class="case-study">
+                  <div class="thumbnail-wrap">
+                    <div data-delay="2500" data-animation="slide" class="w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="w-slide">
+                          <img src="./projects/newsapp (1).png" alt="NewsApp 1" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="/projects/newsapp (2).png" alt="NewsApp 2" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/newsapp (3).png" alt="NewsApp 3" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/newsapp (4).png" alt="NewsApp 4" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/newsapp (5).png" alt="NewsApp 5" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                      </div>
+                      <div class="slide-nav w-slider-nav w-round" style="bottom: 10px;"></div>
+                    </div>
+                    <div class="overlay-01" style="pointer-events: none;"></div>
+                    <div class="year" style="pointer-events: none;">
                       <div class="small-paragraph">2025</div>
                     </div>
                   </div>
-                  <div class="case-study-text">
+                  <a href="https://newsapp-mk.vercel.app/" target="_blank" class="case-study-text" style="cursor: pointer; display: block; text-decoration: none; color: inherit;">
                     <h3 class="display-h5">NewsApp</h3>
                     <div class="paragraph t---neutral-10">
-                      Modern news aggregation platform for India/Nepal with
-                      automated news fetching, admin dashboard, and
-                      comprehensive content management using Next.js 15 and
-                      MongoDB.
+                      Modern news aggregation platform for India/Nepal with automated news fetching, admin dashboard, and comprehensive content management using Next.js 15 and MongoDB.
                     </div>
-                  </div></a
-                >
+                  </a>
+                </div>
               </div>
+              
+              <!-- GIS-SGAY Project with Slider -->
               <div role="listitem" class="case-study-cms w-dyn-item">
-                <a href="#" class="case-study w-inline-block"
-                  ><div class="thumbnail-wrap">
-                    <img
-                      loading="lazy"
-                      src="./projects/gis-sgay (1).png"
-                      alt="GIS-SGAY Project"
-                      class="thumbnail"
-                    />
-                    <div class="overlay-01"></div>
-                    <div class="year">
+                <div class="case-study">
+                  <div class="thumbnail-wrap">
+                    <div data-delay="2500" data-animation="slide" class="w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="w-slide">
+                          <img src="./projects/gis-sgay (1).png" alt="GIS-SGAY 1" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/gis-sgay (2).png" alt="GIS-SGAY 2" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/gis-sgay (3).png" alt="GIS-SGAY 3" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/gis-sgay (4).png" alt="GIS-SGAY 4" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/gis-sgay (5).png" alt="GIS-SGAY 5" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                      </div>
+                      <div class="slide-nav w-slider-nav w-round" style="bottom: 10px;"></div>
+                    </div>
+                    <div class="overlay-01" style="pointer-events: none;"></div>
+                    <div class="year" style="pointer-events: none;">
                       <div class="small-paragraph">2025</div>
                     </div>
                   </div>
-                  <div class="case-study-text">
+                  <a href="#" class="case-study-text" style="cursor: pointer; display: block; text-decoration: none; color: inherit;">
                     <h3 class="display-h5">SGAY GIS-MIS</h3>
                     <div class="paragraph t---neutral-10">
-                      Comprehensive GIS-based Management Information System for
-                      Sikkim Garib Awas Yojana with spatial data management,
-                      beneficiary tracking, and real-time progress monitoring.
+                      Comprehensive GIS-based Management Information System for Sikkim Garib Awas Yojana with spatial data management, beneficiary tracking, and real-time progress monitoring.
                     </div>
-                  </div></a
-                >
+                  </a>
+                </div>
               </div>
+              
+              <!-- Eve.ai Project with Slider -->
               <div role="listitem" class="case-study-cms w-dyn-item">
-                <a
-                  href="https://eveai-ten.vercel.app/"
-                  target="_blank"
-                  class="case-study w-inline-block"
-                  ><div class="thumbnail-wrap">
-                    <img
-                      loading="lazy"
-                      src="./projects/eveai (1).png"
-                      alt="Eve.ai Project"
-                      class="thumbnail"
-                    />
-                    <div class="overlay-01"></div>
-                    <div class="year">
+                <div class="case-study">
+                  <div class="thumbnail-wrap">
+                    <div data-delay="2500" data-animation="slide" class="w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="w-slide">
+                          <img src="./projects/eveai (1).png" alt="Eve.ai 1" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/eveai (2).png" alt="Eve.ai 2" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                        <div class="w-slide">
+                          <img src="./projects/eveai (3).png" alt="Eve.ai 3" onclick="openLightbox(this.src)" style="cursor: pointer;"/>
+                        </div>
+                      </div>
+                      <div class="slide-nav w-slider-nav w-round" style="bottom: 10px;"></div>
+                    </div>
+                    <div class="overlay-01" style="pointer-events: none;"></div>
+                    <div class="year" style="pointer-events: none;">
                       <div class="small-paragraph">2024</div>
                     </div>
                   </div>
-                  <div class="case-study-text">
+                  <a href="https://eveai-ten.vercel.app/" target="_blank" class="case-study-text" style="cursor: pointer; display: block; text-decoration: none; color: inherit;">
                     <h3 class="display-h5">eve.ai</h3>
                     <div class="paragraph t---neutral-10">
-                      An intelligent event planning platform using AI to
-                      streamline event organization from venue selection to
-                      vendor management and guest coordination.
+                      An intelligent event planning platform using AI to streamline event organization from venue selection to vendor management and guest coordination.
                     </div>
-                  </div></a
-                >
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -2371,17 +2433,11 @@
                           PhD, Hyperspectral Remote Sensing & Big Data Analytics
                         </div>
                       </div>
-                      <img
-                        src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion.avif"
-                        loading="lazy"
-                        alt="Contemplative Woman in Vibrant Fashion"
-                        sizes="(max-width: 520px) 100vw, 520px"
-                        srcset="
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion-p-500.avif 500w,
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion.avif       512w
-                        "
-                        class="testimonial-profile-photo"
-                      />
+                      <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                          <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2408,17 +2464,11 @@
                           Sikkim Office, RMDD
                         </div>
                       </div>
-                      <img
-                        src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman.avif"
-                        loading="lazy"
-                        alt="Dreamy Portrait of a Young Woman"
-                        sizes="(max-width: 520px) 100vw, 520px"
-                        srcset="
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman-p-500.avif 500w,
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman.avif       512w
-                        "
-                        class="testimonial-profile-photo"
-                      />
+                      <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                          <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2447,17 +2497,11 @@
                           Founder at Bloomtech
                         </div>
                       </div>
-                      <img
-                        src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient.avif"
-                        loading="lazy"
-                        alt="Modern Portrait Gradient"
-                        sizes="(max-width: 520px) 100vw, 520px"
-                        srcset="
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient-p-500.avif 500w,
-                          https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient.avif       520w
-                        "
-                        class="testimonial-profile-photo"
-                      />
+                      <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                          <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2507,17 +2551,11 @@
                     PhD, Hyperspectral Remote Sensing & Big Data Analytics
                   </div>
                 </div>
-                <img
-                  src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion.avif"
-                  loading="lazy"
-                  alt="Contemplative Woman in Vibrant Fashion"
-                  sizes="(max-width: 520px) 100vw, 520px"
-                  srcset="
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion-p-500.avif 500w,
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03408_Contemplative%20Woman%20in%20Vibrant%20Fashion.avif       512w
-                  "
-                  class="testimonial-profile-photo"
-                />
+                <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                    <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2553,17 +2591,11 @@
                   <div class="paragraph">Shishla Ma'am</div>
                   <div class="paragraph t---neutral-10">Sikkim Office, RMDD</div>
                 </div>
-                <img
-                  src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman.avif"
-                  loading="lazy"
-                  alt="Dreamy Portrait of a Young Woman"
-                  sizes="(max-width: 520px) 100vw, 520px"
-                  srcset="
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman-p-500.avif 500w,
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7fa80bb87671d03416_Dreamy%20Portrait%20of%20a%20Young%20Woman.avif       512w
-                  "
-                  class="testimonial-profile-photo"
-                />
+                <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                    <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -2604,17 +2636,11 @@
                     Founder at Bloomtech
                   </div>
                 </div>
-                <img
-                  src="https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient.avif"
-                  loading="lazy"
-                  alt="Modern Portrait Gradient"
-                  sizes="(max-width: 520px) 100vw, 520px"
-                  srcset="
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient-p-500.avif 500w,
-                    https://cdn.prod.website-files.com/68a413987ca3efce6f38ee67/68a71d7f400136be769bc9dc_Modern%20Portrait%20Gradient.avif       520w
-                  "
-                  class="testimonial-profile-photo"
-                />
+                <div class="testimonial-profile-photo" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ffffff" viewBox="0 0 256 256">
+                    <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -3241,5 +3267,46 @@
       src="asset/68a413987ca3efce6f38ee67/js/webflow.d688f257.c724b0fef498ae09.js"
       type="text/javascript"
     ></script>
+    
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); overflow: auto; padding: 20px;">
+      <span onclick="closeLightbox()" style="position: absolute; top: 20px; right: 40px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10000;">&times;</span>
+      <img id="lightboxImage" style="margin: auto; display: block; max-width: 90%; max-height: 90%; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    </div>
+    
+    <script>
+      function openLightbox(imageSrc) {
+        document.getElementById('imageLightbox').style.display = 'block';
+        document.getElementById('lightboxImage').src = imageSrc;
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeLightbox() {
+        document.getElementById('imageLightbox').style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Close lightbox when clicking outside the image
+      document.getElementById('imageLightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeLightbox();
+        }
+      });
+      
+      // Close lightbox with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+      
+      // Reinitialize Webflow sliders after page load
+      window.addEventListener('load', function() {
+        if (window.Webflow) {
+          window.Webflow.require('slider').redraw();
+          window.Webflow.require('slider').ready();
+        }
+      });
+    </script>
   </body>
 </html>
